@@ -46,6 +46,20 @@ angular.module('core').service('Menus', [
 			return false;
 		};
 
+		// Get menus
+		this.getMenus = function() {
+			var hasSth = false;
+			for (var m in this.menus){
+				hasSth = true;
+				break;
+			}
+			if (hasSth) {
+				return this.menus;
+			} else {
+				throw new Error('Menus is empty!');
+				return false;
+			}
+		};
 		// Get the menu object by menu id
 		this.getMenu = function(menuId) {
 			// Validate that the menu exists
