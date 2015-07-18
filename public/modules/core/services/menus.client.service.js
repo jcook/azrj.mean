@@ -46,7 +46,7 @@ angular.module('core').service('Menus', [
 			return false;
 		};
 
-		// Get menus
+		// Get all menu objects if exists
 		this.getMenus = function() {
 			var hasSth = false;
 			for (var m in this.menus){
@@ -60,6 +60,7 @@ angular.module('core').service('Menus', [
 				return false;
 			}
 		};
+
 		// Get the menu object by menu id
 		this.getMenu = function(menuId) {
 			// Validate that the menu exists
