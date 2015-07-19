@@ -8,7 +8,7 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$http
 		if ($scope.authentication.user) $location.path('/');
 
 		$scope.signup = function() {
-			if ((typeof($scope.credentials.role) == "undefined") ||
+			if ((typeof($scope.credentials.role) === 'undefined') ||
 				($scope.credentials.role === '')) {
 				$scope.error = 'Please select suitable role';
 				return;
