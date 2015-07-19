@@ -25,17 +25,12 @@ var validateLocalStrategyPassword = function(password) {
  * User Schema
  */
 var UserSchema = new Schema({
-	firstName: {
+	nickName: {
 		type: String,
 		trim: true,
 		default: '',
-		validate: [validateLocalStrategyProperty, 'Please fill in your first name']
-	},
-	lastName: {
-		type: String,
-		trim: true,
-		default: '',
-		validate: [validateLocalStrategyProperty, 'Please fill in your last name']
+		unique: 'Nickname already exists',
+		validate: [validateLocalStrategyProperty, 'Please fill in your nick name']
 	},
 	displayName: {
 		type: String,
