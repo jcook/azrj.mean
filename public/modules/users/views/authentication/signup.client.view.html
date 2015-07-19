@@ -4,8 +4,12 @@
 		<form name="userForm" data-ng-submit="signup()" class="signin form-horizontal" novalidate autocomplete="off">
 			<fieldset>
 				<div class="form-group">
-					<label for="nickName">Nick Name</label>
-					<input type="text" required id="nickName" name="nickName" class="form-control" data-ng-model="credentials.nickName" placeholder="First Name">
+					<label for="nickName">昵称</label>
+					<input type="text" required id="nickName" name="nickName" class="form-control" data-ng-model="credentials.nickName" placeholder="昵称">
+				</div>
+				<div class="form-group">
+					<label for="telephone">电话</label>
+					<input type="text" required id="telephone" name="telephone" class="form-control" data-ng-model="credentials.telephone" placeholder="电话">
 				</div>
 				<div class="form-group">
 					<label for="email">Email</label>

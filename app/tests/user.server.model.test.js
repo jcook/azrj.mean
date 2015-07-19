@@ -19,6 +19,7 @@ describe('User Model Unit Tests:', function() {
 	before(function(done) {
 		user = new User({
 			nickName: 'nickName',
+			telephone: '138383838',
 			displayName: 'Full Name',
 			email: 'test@test.com',
 			username: 'username',
@@ -27,6 +28,7 @@ describe('User Model Unit Tests:', function() {
 		});
 		user2 = new User({
 			nickName: 'nickName',
+			telephone: '138383838',
 			displayName: 'Full Name',
 			email: 'test@test.com',
 			username: 'username',

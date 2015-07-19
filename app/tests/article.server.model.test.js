@@ -20,6 +20,7 @@ describe('Article Model Unit Tests:', function() {
 	beforeEach(function(done) {
 		user = new User({
 			nickName: 'nickName',
+			telephone: '138383838',
 			displayName: 'Full Name',
 			email: 'test@test.com',
 			username: 'username',
