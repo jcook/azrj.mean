@@ -12,6 +12,10 @@ module.exports = function(app) {
 		.get(articles.list)
 		.post(users.requiresLogin, articles.create);
 
+	// Article Routes By Type
+	app.route('/articles/type/:typeId')
+		.get(articles.listByType);
+
 	app.route('/articles/:articleId')
 		.get(articles.read)
 		.put(users.requiresLogin, articles.hasAuthorization, articles.update)

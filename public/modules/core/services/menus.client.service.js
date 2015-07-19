@@ -57,7 +57,6 @@ angular.module('core').service('Menus', [
 				return this.menus;
 			} else {
 				throw new Error('Menus is empty!');
-				return false;
 			}
 		};
 
@@ -175,7 +174,5 @@ angular.module('core').service('Menus', [
 			return this.menus[menuId];
 		};
 
-		//Adding the topbar menu
-		this.addMenu('topbar');
 	}
 ]);

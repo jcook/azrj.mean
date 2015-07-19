@@ -1,6 +1,6 @@
-<section data-ng-controller="ArticlesController" data-ng-init="find()">
+<section data-ng-controller="ArticlesController" data-ng-init="findByType()">
 	<div class="page-header">
-		<h1>All Articles</h1>
+		<h1>Articles By Type: {{typeId}}</h1>
 	</div>
 	<div class="list-group">
 		<a data-ng-repeat="article in articles" data-ng-href="#!/articles/{{article._id}}" class="list-group-item">

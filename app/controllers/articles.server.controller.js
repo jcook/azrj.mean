@@ -85,6 +85,21 @@ exports.list = function(req, res) {
 };
 
 /**
+ * List of Articles by Type
+ */
+exports.listByType = function(req, res) {
+	Article.find({type: req.params.typeId}).sort('-created').populate('user', 'displayName').exec(function(err, articles) {
+		if (err) {
+			return res.status(400).send({
+				message: errorHandler.getErrorMessage(err)
+			});
+		} else {
+			res.json(articles);
+		}
+	});
+};
+
+/**
  * Article middleware
  */
 exports.articleByID = function(req, res, next, id) {
