@@ -1,0 +1,22 @@
+<div data-ng-controller="ActController">
+
+    <div class="col-md-6 jumbotron text-center">
+    <tabset>
+        <tab ng-repeat="workspace in workspaces"
+             heading="{{workspace.name}}"
+             id={{workspace.id}}
+             active=workspace.active
+             select="tabSelect(workspace.text)">
+        </tab>
+        
+        <!--tab select="addWorkspace()">
+            <tab-heading>
+                <i class="icon-plus-sign">+</i>
+            </tab-heading>
+        </tab-->
+    </tabset>
+    <textarea rows="1" cols="70" placeholder={{textContent}} style="padding: 20px 0; resize: none; overflow: hidden"></textarea>
+    <button ng-click="resetAct()">重置</button>
+    <button ng-click="updateAct()">提交</button>
+    </div>    
+</section>
