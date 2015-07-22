@@ -1,3 +1,9 @@
+To learn MEAN, here I will try to implement http://www.manyoubang.com/ with MEAN.
+
+# Leave original content below.
+# Leave original content below.
+# Leave original content below.
+
 [![MEAN.JS Logo](http://meanjs.org/img/logo-small.png)](http://meanjs.org/)
 
 [![Build Status](https://travis-ci.org/meanjs/mean.svg?branch=master)](https://travis-ci.org/meanjs/mean)
