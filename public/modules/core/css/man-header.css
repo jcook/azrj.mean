@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/**
+ * Remove default margin.
+ */
+body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, del, em, img, strong, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-weight: normal; }
+
+
+body {
+  font-family: 'Helvetica Neue', Helvetica,"宋体", "Microsoft YaHei", "微软雅黑", sans-serif;
+  font-size: 14px;
+  padding-top: 54px;
+  overflow-y: scroll; }
+
+/**
+ * Layout: header
+ */
+.man-header {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  border-bottom: 4px solid #39a338;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translatez(0);
+  -ms-transform: translatez(0);
+  -o-transform: translatez(0);
+  transform: translatez(0);
+}
+  
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+.man-header a {
+  background-color: transparent;
+  text-decoration: none;
+  color: #333; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+ /*
+.man-header a:focus,
+.man-header a:focus {
+/* TODO: outline: 0; }
+*/
+.man-header ul, .man-header li {
+  list-style: none; }
+.man-header .man-header-content {
+  height: 50px; }
+
+.man-header .left {
+  float: left;
+  width: 150px; }
+
+.man-header .left .logo {
+  display: block;
+  width: auto;
+  height: 35px;
+  margin: 8px 15px 0 0; }
+
+.man-header .nav {
+  float: left;
+  margin-left: 25px; }
+
+.man-header .nav li {
+  float: left; }
+
+.man-header .nav a {
+  display: block;
+  padding: 0 17px;
+  text-align: center;
+  color: #333;
+  height: 50px;
+  line-height: 50px;
+  font-size: 14px;
+  font-family: "Microsoft YaHei", Arial, sans-serif; }
+
+.man-header .cur a {
+  background-color: #eee;
+  color: #068649; }
+
+.man-header .nav a:hover {
+  background-color: #eee; }
+  
+.man-header input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  border: none;
+  padding: 1px;
+}
+/* TODO:
+.man-header input:focus {
+    outline: none;
+}
+*/
+.man-header  .tsearch {
+  position: relative;
+  width: 225px;
+  height: 28px;
+  padding-left: 8px;
+  margin-top: 11px;
+  float: left;
+  border: 1px solid #ccc;
+  background: #f2f2f5;
+  margin-left: 15px; }
+
+.man-header  .tsearch .inputtext {
+  float: left;
+  height: 14px;
+  padding: 3px 0;
+  width: 180px;
+  margin-top: 4px;
+  line-height: 14px;
+  color: #333;
+  background-color: #f2f2f5; 
+}
+
+.man-header  .tsearch .inputtext::-webkit-input-placeholder {
+    color: #666; 
+}
+
+.man-header  .tsearch .inputtext:-ms-input-placeholder {
+    color: #666; 
+}
+
+.man-header  .tsearch .searchbt {
+  width: 27px;
+  height: 28px;
+  display: inline-block;
+  zoom: 1;
+  background: url(../img/header/sousuo.png) 0 center no-repeat;
+  font-size: 0;
+  cursor: pointer;
+  margin-left: 15px; 
+}
+
+.man-header  .banner {
+  float: right;
+  line-height: 60px; 
+}
+
+.man-header .man-container {
+  width: 1000px;
+  margin: 0 auto; 
+}
+
+
+
+

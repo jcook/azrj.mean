@@ -1,58 +1,32 @@
-<div class="container" data-ng-controller="HeaderController">
-	<div class="navbar-header">
-		<button class="navbar-toggle" type="button" data-ng-click="toggleCollapsibleMenu()">
-			<span class="sr-only">Toggle navigation</span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		</button>
-		<a href="/#!/" class="navbar-brand">MEAN.JS</a>
-	</div>
-	<nav class="collapse navbar-collapse" collapse="!isCollapsed" role="navigation">
-		<ul class="nav navbar-nav" data-ng-repeat="m in menus" data-ng-if="m.shouldRender(authentication.user);">
-			<li data-ng-repeat="item in m.items | orderBy: 'position'" data-ng-if="item.shouldRender(authentication.user);" ng-switch="item.menuItemType" ui-route="{{item.uiRoute}}" class="{{item.menuItemClass}}" ng-class="{active: ($uiRoute)}" dropdown="item.menuItemType === 'dropdown'">
-				<a ng-switch-when="dropdown" class="dropdown-toggle" dropdown-toggle>
-					<span data-ng-bind="item.title"></span>
-					<b class="caret"></b>
-				</a>
-				<ul ng-switch-when="dropdown" class="dropdown-menu">
-					<li data-ng-repeat="subitem in item.items | orderBy: 'position'" data-ng-if="subitem.shouldRender(authentication.user);" ui-route="{{subitem.uiRoute}}" ng-class="{active: $uiRoute}">
-						<a href="/#!/{{subitem.link}}" data-ng-bind="subitem.title"></a>
-					</li>
-				</ul>
-				<a ng-switch-default href="/#!/{{item.link}}" data-ng-bind="item.title"></a>
-			</li>
-		</ul>
-		<ul class="nav navbar-nav navbar-right" data-ng-hide="authentication.user">
-			<li ui-route="/signup" ng-class="{active: $uiRoute}">
-				<a href="/#!/signup">Sign Up</a>
-			</li>
-			<li class="divider-vertical"></li>
-			<li ui-route="/signin" ng-class="{active: $uiRoute}">
-				<a href="/#!/signin">Sign In</a>
-			</li>
-		</ul>
-		<ul class="nav navbar-nav navbar-right" data-ng-show="authentication.user">
-			<li class="dropdown" dropdown>
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown" dropdown-toggle>
-					<span data-ng-bind="authentication.user.displayName"></span> <b class="caret"></b>
-				</a>
-				<ul class="dropdown-menu">
-					<li>
-						<a href="/#!/settings/profile">Edit Profile</a>
-					</li>
-					<li>
-						<a href="/#!/settings/accounts">Manage Social Accounts</a>
-					</li>
-					<li data-ng-show="authentication.user.provider === 'local'">
-						<a href="/#!/settings/password">Change Password</a>
-					</li>
-					<li class="divider"></li>
-					<li>
-						<a href="/auth/signout">Signout</a>
-					</li>
-				</ul>
-			</li>
-		</ul>
-	</nav>
+<div data-ng-controller="HeaderController">
+<div class="man-header" style="height: 54px;">
+            <div class="man-header-content man-container">
+                <div class="left">
+                                            <a  href="http://www.manyoubang.com/" title="慢友帮—中国最大慢性病病友互帮社区"><img src="http://www.manyoubang.com/theme/sample/img/logo.png"  alt="慢友帮—中国最大慢性病病友互帮社区" title="回到首页" class="logo" ></a>
+                                    </div>
+                <div class="tsearch" style="width: 235px; height: 30px;">
+                    <form method="GET" action="http://www.manyoubang.com/index.php">
+                        <input type="hidden" name="app" value="search" />
+                        <input type="hidden" name="ac" value="s" />
+                        <input type="hidden" name="ts" value="discuss" />
+                        <input type="text" class="inputtext" id="searchkw" name="kw" style="height: auto;" value="" placeholder="话题/药物/疗法/用户/群组" autocomplete="off">
+                        <input id="searchto" type="submit" class="searchbt" value=" " />
+                        <div class="search-con-wrapper"></div>
+                    </form>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li  class="cur" ><a href="http://www.manyoubang.com/home-index.html">广场</a></li>
+                        <li ><a href="http://www.manyoubang.com/group.html">疾病</a></li>
+                        <li ><a href="http://www.manyoubang.com/home-subjects-page-1">科普</a></li>
+                                            </ul>
+                </div>
+                                                <div class="banner">
+                    <img src="http://www.manyoubang.com/css/img/index-banner.png" alt="分享 互助 鼓励">
+                </div>
+                                            </div>
+            <div class="greenbg">
+            </div>
+</div>
+
 </div>
