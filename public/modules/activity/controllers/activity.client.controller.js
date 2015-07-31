@@ -36,8 +36,6 @@ angular.module('activity').controller('ActController', ['$scope', '$stateParams'
 
         $scope.tabSelect = function(str) {
             $scope.textContent = str;
-        }
-
-        
+        };
 	}
 ]);
