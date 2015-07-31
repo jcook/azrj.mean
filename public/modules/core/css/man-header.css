@@ -150,7 +150,7 @@ body {
   margin-left: 15px; 
 }
 
-.man-header  .banner {
+.man-header  .banner, .man-header .login-box {
   float: right;
   line-height: 60px; 
 }
@@ -160,6 +160,11 @@ body {
   margin: 0 auto; 
 }
 
-
-
-
+.man-header .login-box  .fast-login {
+  float: left;
+  color: #39a338;
+  font-size: 16px;
+}
+.man-header .login-box .fast-login a {
+  color: #39a338;
+}

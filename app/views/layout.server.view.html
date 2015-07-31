@@ -52,7 +52,7 @@
 			{% block content %}{% endblock %}
 		</section>
 	</section>
-
+    <section data-ng-include="'/modules/core/views/footer.client.view.html'"></section>
 	<!--Embedding The User Object-->
 	<script type="text/javascript">
 		var user = {{ user | json | safe }};

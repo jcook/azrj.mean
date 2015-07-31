@@ -2,16 +2,14 @@
 <div class="man-header" style="height: 54px;">
             <div class="man-header-content man-container">
                 <div class="left">
-                                            <a  href="http://www.manyoubang.com/" title="慢友帮—中国最大慢性病病友互帮社区"><img src="http://www.manyoubang.com/theme/sample/img/logo.png"  alt="慢友帮—中国最大慢性病病友互帮社区" title="回到首页" class="logo" ></a>
-                                    </div>
+                    <a  href="/" title="慢友帮—中国最大慢性病病友互帮社区"><img src="http://www.manyoubang.com/theme/sample/img/logo.png"  alt="慢友帮—中国最大慢性病病友互帮社区" title="回到首页" class="logo" ></a>
+                </div>
                 <div class="tsearch" style="width: 235px; height: 30px;">
-                    <form method="GET" action="http://www.manyoubang.com/index.php">
-                        <input type="hidden" name="app" value="search" />
-                        <input type="hidden" name="ac" value="s" />
-                        <input type="hidden" name="ts" value="discuss" />
-                        <input type="text" class="inputtext" id="searchkw" name="kw" style="height: auto; outline: 0;" value="" placeholder="话题/药物/疗法/用户/群组" autocomplete="off">
-                        <input id="searchto" type="submit" class="searchbt" value=" " />
-                        <div class="search-con-wrapper"></div>
+                    <form name="tsearch-form" data-ng-submit="search()" novalidate>
+                    	<div class="form-group">
+                            <input type="text" class="inputtext" style="height: auto; outline: 0;" value="" data-ng-model="content" placeholder="话题/药物/疗法/用户/群组" autocomplete="off">
+                            <input type="submit" class="searchbt" style="outline: 0;" value=" " />
+                        </div>
                     </form>
                 </div>
                 <div class="nav">
@@ -19,14 +17,19 @@
                         <li  class="cur" ><a href="http://www.manyoubang.com/home-index.html">广场</a></li>
                         <li ><a href="http://www.manyoubang.com/group.html">疾病</a></li>
                         <li ><a href="http://www.manyoubang.com/home-subjects-page-1">科普</a></li>
-                                            </ul>
+                    </ul>
                 </div>
-                                                <div class="banner">
+                <div class="banner" data-ng-show="isHome()">
                     <img src="http://www.manyoubang.com/css/img/index-banner.png" alt="分享 互助 鼓励">
                 </div>
-                                            </div>
+                <div class="login-box" data-ng-show="!isHome()">
+                    <div class="fast-login">
+                        <a href="http://www.manyoubang.com/user-login.html" class="login-popup">登录</a>&nbsp;|&nbsp;<a href="http://www.manyoubang.com/user-register.html">注册</a>
+                    </div>
+                </div>
+                
+            </div>
             <div class="greenbg">
             </div>
 </div>
-
 </div>
