@@ -1,0 +1,48 @@
+[
+    {
+        "post_item_photo": 
+        {
+                "ref": "#",
+                "img": "http://www.manyoubang.com/cache/user/0/33/70/3b45c9ddea_70_70.jpg"
+        },
+        "post_item_con": 
+        {
+                "author_ref": "#",
+                "author": "东哥",
+                "title_ref": "#",
+                "title_content": "吸烟对胎儿六大危害",
+                "content": "你是谁",
+                "post_time": "昨天 6:25",
+                "post_from": "养生保健",
+                "post_from_ref": "#"                
+        },
+        "info_ops": 
+        {
+                "comment_cnt": 5,
+                "hug_cnt": 10
+        }
+    },
+    {
+        "post_item_photo": 
+        {
+                "ref": "#",
+                "img": "http://www.manyoubang.com/cache/user/0/33/70/3b45c9ddea_70_70.jpg"
+        },
+        "post_item_con": 
+        {
+                "author_ref": "#",
+                "author": "西哥",                
+                "title_ref": "#",
+                "title_content": "哈哈",
+                "content": "你是谁",
+                "post_time": "昨天 36:25",
+                "post_from": "奇怪板块",
+                "post_from_ref": "#"                
+        },
+        "info_ops": 
+        {
+                "comment_cnt": 5,
+                "hug_cnt": 10
+        }
+    }    
+] 

@@ -1,3 +1,82 @@
 <section data-ng-controller="SearchController">
-{{search_content}}
+<!--中间推荐热区-->
+<div class="search-container-wrapper">
+	<div class="search-container">
+		<div class="my-middle">
+			<!-- 主内容区开始 -->
+			<div class="my-box">
+				<div class="my-search" ng-show="blocks[0].active">
+                    <ul>
+                        <li ng-repeat="related in relateds">
+                            <a href="#" ng-class="{true: 'active', false: ''}[related.active]" ng-click="click_list(relateds, $index)">{{related.name}}</a>
+                        </li>
+                    </ul>
+                </div>
+			</div>
+			<div class="my-con">
+				<div class="search-bar">
+                <ul>
+                    <li ng-class="{true: 'searchTypeButton active', false: 'searchTypeButton'}[block.active]" ng-repeat="block in blocks">
+                        <a href="#" ng-click="click_list(blocks, $index)">{{block.name}}</a>
+                        <div class="arrow-top" ng-show="block.active">
+                            <span class="arrow-top-out"></span><span class="arrow-top-in"></span>
+                        </div>
+                    </li>
+                </ul>
+
+                <form class="search-form" data-ng-submit="search()" novalidate>
+                    <input type="text" data-ng-model="search_content" autocomplete="off" value="" placeholder="输入关键字" style="margin: 0 auto; width: 478px; height: 30px;" class="search-query search-text">
+                    <input value="搜索" type="submit" class="btn">
+                </form>
+                <p class="desc" style="height: 34px;">找到{{posts.length}}个结果</p>
+                </div>
+				<div class="post-bd">
+					<ul>
+                    <div data-ng-show="error" class="text-danger">
+                        <strong data-ng-bind="error"></strong>
+                    </div> 
+                    <ul>
+                        <li class="post-item" ng-repeat="post in posts">
+                            <div class="post-item_photo">
+                                <a href="{{post.post_item_photo.ref}}" class="cardInfo" target="_blank">
+                                    <img ng-src="{{post.post_item_photo.img}}" alt="东哥">
+                                </a>
+                            </div>
+                            <div class="post-item_con">
+                                <a class="post-item_author cardInfo" href="{{post.post_item_con.author_ref}}" data-id="33542" target="_blank">{{post.post_item_con.author}}</a>
+                                <h2><a href="{{post.post_item_con.title_ref}}" class="post-title-text" target="_blank">{{post.post_item_con.title_content}}</a></h2>
+                                <div class="post-item_pro">
+                                    <div class="post-item-con">
+                                        {{post.post_item_con.content}}
+                                    </div> 
+                                </div>
+                                <div class="post-item_info">
+                                <div class="info-group">
+                                    <span class="post-time">{{post.post_item_con.post_time}}</span>
+                                    <span class="post-from">来自<a href="{{post.post_item_con.post_from_ref}}">{{post.post_item_con.post_from}}</a></span>
+                                    <a href="" class="reportPost" data-type="1">举报</a> 
+                                </div> 
+                                </div>
+                            </div>  
+                            <div class="info-ops row-4">  
+                                <a class="collect" href="javascript:;">收藏</a> 
+                                <a class="un-collect" href="javascript:;">取消收藏</a>  
+                                <a href="javascript:;" class="repost">转发<span class="num"></span></a> 
+                                <a class="post-comment" href="javascript:;" title="我要评论" data-comment="comment">评论<span class="num">{{post.info_ops.comment_cnt}}</span></a> 
+                                <a href="javascript:;" class="post-comment_up">收起评论<span class="num">5</span></a>  
+                                <a class="hug last" href="javascript:;"><span class="tit">拥抱</span><span class="num">{{post.info_ops.hug_cnt}}</span></a>  
+                            </div>
+                          
+                        </li>
+                    </ul>
+					</ul>
+				</div>
+				<!-- 下一页 -->
+				<ul id="pagination"></ul>
+			</div>            
+			<!-- 主内容区结束 -->
+		</div>
+	</div>
+</div>
+<!-- 中间推荐结束 -->
 </section>
