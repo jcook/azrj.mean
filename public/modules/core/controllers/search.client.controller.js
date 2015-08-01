@@ -40,8 +40,11 @@ angular.module('core').controller('SearchController', ['$scope', 'Authentication
 
             var url = '';
 
-            if ($scope.blocks[0].active)
+            if ($scope.blocks[0].active) {
                 url = './modules/core/db/posts.json';
+            } else if ($scope.blocks[1].active) {
+                url = './modules/core/db/man-user.json';
+            }
             if (url === '') {
                 $scope.error = 'ERR: invalid search type!';
                 return;

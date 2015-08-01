@@ -30,8 +30,7 @@
                 </form>
                 <p class="desc" style="height: 34px;">找到{{posts.length}}个结果</p>
                 </div>
-				<div class="post-bd">
-					<ul>
+				<div class="post-bd"   ng-if="blocks[0].active">
                     <div data-ng-show="error" class="text-danger">
                         <strong data-ng-bind="error"></strong>
                     </div> 
@@ -69,8 +68,32 @@
                           
                         </li>
                     </ul>
-					</ul>
 				</div>
+                <div class="post-bd fans-list"   ng-if="blocks[1].active">
+                    <ul >
+                        <li class="follow-item" style="height: 96px;" ng-repeat="post in posts">
+                            <div class="face">
+                                <a href="{{post.face_ref}}" class="cardInfo" data-id="11261">
+                                <img src="{{post.photo}}">
+                                </a> 
+                            </div>
+                            <div class="con"> 
+                                <div class="hd"> 
+                                <a href="{{post.con_ref}}" class="cardInfo">qingdao</a>
+                                </div>
+                                <p class="userInfo"> 关注
+                                <a class="num" href="{{post.follow_ref}}" target="_blank">{{post.follow.length}}</a> 粉丝
+                                <a class="num" href="{{post.fans_ref}}" target="_blank">{{post.fans.length}}</a> 话题
+                                <a class="num" href="{{post.topic_ref}}" target="_blank">{{post.topic.length}}</a> 
+                                </p>
+                            </div> 
+                            <div class="opt-wrapper"> 
+                                <a href="" class="add-follow"><i></i>关注</a>  
+                            </div> 
+                        </li>
+                        
+                    </ul>
+                </div>
 				<!-- 下一页 -->
 				<ul id="pagination"></ul>
 			</div>            

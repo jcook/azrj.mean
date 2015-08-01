@@ -311,3 +311,82 @@
   color: #aaa;
 }
 
+/* follow-item */
+.follow-list, .fans-list {
+  background: #fff;
+  padding: 0 10px;
+  border: 1px solid #eee;
+  position: relative;
+}
+
+.follow-item, .fans-item {
+  position: relative;
+  zoom: 1;
+  padding: 16px 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+.follow-item .face, .fans-item .face {
+  float: left;
+  width: 64px;
+  height: 64px;
+  margin-right: 10px;
+}
+.follow-item .face img, .fans-item .face img {
+  display: block;
+  width: 64px;
+  height: 64px;
+}
+
+.follow-item .con, .fans-item .con {
+  overflow: hidden;
+}
+.follow-item .hd, .fans-item .hd {
+  margin-bottom: 10px;
+}
+.follow-item .hd a, .fans-item .hd a {
+  color: #2a7250;
+}
+.follow-item .userInfo, .follow-item .instro, .fans-item .userInfo, .fans-item .instro {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #828282;
+  font-family: "Helvetica Neue",Helvetica,"SimSun","宋体",Arial,sans-serif;
+  font-size: 12px;
+}
+.follow-item .num, .fans-item .num {
+  color: #eb7350;
+  margin-left: 5px;
+  margin-right: 8px;
+}
+.follow-item .opt-wrapper, .fans-item .opt-wrapper {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  font-size: 0;
+  z-index: 10;
+}
+.follow-item .single, .follow-item .to-to, .follow-item .add-follow, .follow-item .more-operate, .fans-item .single, .fans-item .to-to, .fans-item .add-follow, .fans-item .more-operate {
+  margin-left: 6px;
+  display: inline-block;
+  line-height: 24px;
+  padding: 0 10px;
+  border: 1px solid #d9d9d9;
+  font-size: 12px;
+  border-radius: 2px;
+  box-shadow: rgba(0,0,0,0.09804) 0px 1px 2px 0px;
+}
+.follow-item .add-follow i, .fans-item .add-follow i {
+  background: url(../img/search/add-follow.png);
+  width: 10px;
+  height: 11px;
+}
+.follow-item i, .fans-item i {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.follow-item:last-child, .fans-item:last-child {
+  border-bottom: none;
+}

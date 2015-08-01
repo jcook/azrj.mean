@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "qingdao",
+        "location": "青岛市",
+        "brief": "哈哈 我是一个人",
+        "photo": "http://www.manyoubang.com/cache/user/112611434/112611434094/70/bee9eece01_70_70.png",
+        "face_ref": "#",
+        "con_ref": "#",
+        "follow": [2, 3, 4],
+        "follow_ref": "#",
+        "fans": [2, 3, 4, 5, 6],
+        "fans_ref": "#",
+        "topic": [1, 2, 3, 4, 5, 9],
+        "topic_ref": "#",
+        "board": [1, 2, 3, 4] 
+    },
+    {
+        "id": 2,
+        "name": "飞鸟",
+        "location": "青岛市",
+        "brief": "哈哈 我是一个人",
+        "photo": "http://www.manyoubang.com/cache/user/112611434/112611434094/70/bee9eece01_70_70.png",
+        "face_ref": "#",
+        "con_ref": "#",
+        "follow": [2, 3, 4],
+        "follow_ref": "#",
+        "fans": [2, 4, 5, 6],
+        "fans_ref": "#",
+        "topic": [1, 2, 3, 4, 5, 9],
+        "topic_ref": "#",
+        "board": [1, 2, 3, 4] 
+    },
+    {
+        "id": 3,
+        "name": "hehe",
+        "location": "青岛市",
+        "brief": "哈哈 我是一个人",
+        "photo": "http://www.manyoubang.com/cache/user/112611434/112611434094/70/bee9eece01_70_70.png",
+        "face_ref": "#",
+        "con_ref": "#",
+        "follow": [2, 3, 4],
+        "follow_ref": "#",
+        "fans": [2, 4, 5, 6],
+        "fans_ref": "#",
+        "topic": [9],
+        "topic_ref": "#",
+        "board": [1, 2, 3, 4] 
+    }
+]
