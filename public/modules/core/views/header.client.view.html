@@ -14,9 +14,9 @@
                 </div>
                 <div class="nav">
                     <ul>
-                        <li  class="cur" ><a href="http://www.manyoubang.com/home-index.html">广场</a></li>
-                        <li ><a href="http://www.manyoubang.com/group.html">疾病</a></li>
-                        <li ><a href="http://www.manyoubang.com/home-subjects-page-1">科普</a></li>
+                        <li ng-repeat="board in boards" ng-class="{true: 'cur', false: ''}[isHome() && board.active]">
+                            <a href="{{board.ref}}" ng-click="click_list(boards, $index)">{{board.name}}</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="banner" data-ng-show="isHome()">

@@ -8,7 +8,33 @@ angular.module('core').controller('HeaderController', ['$scope', 'Authentication
         
         /* statistics variables. */
         $scope.search_cnt = 0;
-
+        
+        $scope.boards = [
+            {
+                name: '广场',
+                ref: 'http://www.manyoubang.com/home-index.html',
+                active: true,
+            },
+            {
+                name: '疾病',
+                ref: 'http://www.manyoubang.com/group.html',
+                active: false,
+            },
+            {
+                name: '科普',
+                ref: 'http://www.manyoubang.com/home-subjects-page-1',
+                active: false,
+            }
+        ];
+        
+        $scope.click_list = function(arr, id) {
+            /* clear first. */
+            arr.forEach(function(e) {
+                e.active = false;
+            });
+            arr[id].active = true;
+        };
+        
 		$scope.toggleCollapsibleMenu = function() {
 			$scope.isCollapsed = !$scope.isCollapsed;
 		};
