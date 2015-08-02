@@ -38,12 +38,16 @@ angular.module('core').controller('SearchController', ['$scope', 'Authentication
                 return;
             }
 
-            var url = '';
+            var url = '',
+                filter_condition = '';
 
             if ($scope.blocks[0].active) {
                 url = './modules/core/db/posts.json';
+                //filter_condition = $scope.search_content
             } else if ($scope.blocks[1].active) {
                 url = './modules/core/db/man-user.json';
+            } else if ($scope.blocks[2].active) {
+                url = './modules/core/db/man-board.json';   
             }
             if (url === '') {
                 $scope.error = 'ERR: invalid search type!';

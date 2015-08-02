@@ -70,28 +70,52 @@
                     </ul>
 				</div>
                 <div class="post-bd fans-list"   ng-if="blocks[1].active">
-                    <ul >
+                    <ul>
                         <li class="follow-item" style="height: 96px;" ng-repeat="post in posts">
                             <div class="face">
                                 <a href="{{post.face_ref}}" class="cardInfo" data-id="11261">
-                                <img src="{{post.photo}}">
-                                </a> 
+                                <img ng-src="{{post.photo}}">
+                                </a>
                             </div>
-                            <div class="con"> 
-                                <div class="hd"> 
+                            <div class="con">
+                                <div class="hd">
                                 <a href="{{post.con_ref}}" class="cardInfo">qingdao</a>
                                 </div>
                                 <p class="userInfo"> 关注
                                 <a class="num" href="{{post.follow_ref}}" target="_blank">{{post.follow.length}}</a> 粉丝
                                 <a class="num" href="{{post.fans_ref}}" target="_blank">{{post.fans.length}}</a> 话题
-                                <a class="num" href="{{post.topic_ref}}" target="_blank">{{post.topic.length}}</a> 
+                                <a class="num" href="{{post.topic_ref}}" target="_blank">{{post.topic.length}}</a>
                                 </p>
-                            </div> 
-                            <div class="opt-wrapper"> 
-                                <a href="" class="add-follow"><i></i>关注</a>  
-                            </div> 
+                            </div>
+                            <div class="opt-wrapper">
+                                <a href="" class="add-follow"><i></i>关注</a>
+                            </div>
+                        </li>                        
+                    </ul>
+                </div>
+                <div class="post-bd qz-list" ng-if="blocks[2].active">
+                    <ul>
+                        <li ng-repeat="post in posts">
+                            <div id="info" class="section">
+                                <div class="info-bd">
+                                    <a href="{{post.bd_ref}}" target="_blank">
+                                    <img ng-src="{{post.bd_img}}" alt="{{post.detail_str}}" class="avatar">
+                                    </a>
+                                    <div class="detail">
+                                        <h3><a href="{{post.detail_ref}}" target="_blank">{{post.detail_str}}</a></h3>
+                                    <ul>
+                                        <li ng-repeat="s in post.spans">
+                                            <span class="title">{{s.title}}：</span>
+                                            <span>{{s.content}}</span>
+                                        </li>
+                                    </ul>
+                                    </div>
+                                    <div class="info-hd">
+                                        <a class="qz-apply" href="{{post.hd_ref}}" target="_blank">{{post.hd}}</a>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
-                        
                     </ul>
                 </div>
 				<!-- 下一页 -->

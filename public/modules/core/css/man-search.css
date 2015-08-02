@@ -390,3 +390,54 @@
 .follow-item:last-child, .fans-item:last-child {
   border-bottom: none;
 }
+
+.search-box .qz-list .section {
+  position: relative;
+}
+
+.section {
+  padding: 10px;
+}
+.section, .mod, .my-shareBox, .my-msg .back-msg {
+  border-radius: 2px;
+  border: 1px solid #eee;
+  background: #fff;
+  margin-bottom: 10px;
+}
+
+ .qz-list .info-hd {
+  top: 10px;
+  right: 10px;
+  text-align: right;
+}
+ .qz-list .info-hd a {
+  color: #2a7250;
+}
+.info-bd, .user {
+  overflow: hidden;
+  zoom: 1;
+}
+.detail {
+    float: left;
+}
+.section .avatar {
+  float: left;
+  margin-right: 15px;
+  width: 75px;
+  height: 75px;
+}
+
+#info h3 {
+  margin: 6px 0 12px;
+}
+#info li {
+  overflow: hidden;
+  zoom: 1;
+  line-height: 20px;
+  font-size: 12px;
+  color: #888;
+}
+#info .title {
+  float: left;
+  margin-right: 3px;
+}
