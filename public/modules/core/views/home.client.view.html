@@ -1,7 +1,7 @@
 <section data-ng-controller="HomeController">
 <div class="container-wrapper">
 <!-- home1 -->
-<div class="main-container">
+<div class="main-container"  ng-show="isHome()">
     <div class="slogan-slider">
         <div class="bx-wrapper">
         <div class="bx-viewport">
@@ -76,7 +76,7 @@
 <!-- home2 begin -->
 <div class="middle-hot">
     <div class="cleft">
-        <div class="toutiao-listWrapper">
+        <div class="toutiao-listWrapper" ng-show="isHome()">
                 <ul class="toutiao-list">                    
                     <li class="result">
                     <div class="pic">

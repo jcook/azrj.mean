@@ -14,8 +14,8 @@
                 </div>
                 <div class="nav">
                     <ul>
-                        <li ng-repeat="board in boards" ng-class="{true: 'cur', false: ''}[isHome() && board.active]">
-                            <a href="{{board.ref}}" ng-click="click_list(boards, $index)">{{board.name}}</a>
+                        <li ng-repeat="board in boards" ng-class="{true: 'cur', false: ''}[isActive(board)]">
+                            <a href="{{board.prefix + board.ref}}" ng-click="click_list(boards, $index)">{{board.name}}</a>
                         </li>
                     </ul>
                 </div>

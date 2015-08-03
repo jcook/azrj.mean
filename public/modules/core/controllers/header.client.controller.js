@@ -9,30 +9,45 @@ angular.module('core').controller('HeaderController', ['$scope', 'Authentication
         /* statistics variables. */
         $scope.search_cnt = 0;
         
+        $scope.path = $location.path();        
+        /* TODO:
+         *  Do we really need prefix?
+         *  Why `$locationProvider.html5Mode(true);' cannot work for search page? 
+         */
         $scope.boards = [
             {
                 name: '广场',
-                ref: 'http://www.manyoubang.com/home-index.html',
+                prefix: '#!',
+                ref: '/',
                 active: true,
             },
             {
                 name: '疾病',
-                ref: 'http://www.manyoubang.com/group.html',
+                prefix: '#!',
+                ref: '/diseases',
                 active: false,
             },
             {
                 name: '科普',
-                ref: 'http://www.manyoubang.com/home-subjects-page-1',
+                prefix: '#!',
+                ref: '/',
                 active: false,
             }
         ];
-        
+
+        $scope.isActive = function(board) {
+             //$scope.path = $location.path();        
+            return (board.active && $location.path() === board.ref);
+        };
+
         $scope.click_list = function(arr, id) {
             /* clear first. */
             arr.forEach(function(e) {
                 e.active = false;
             });
             arr[id].active = true;
+            //$scope.path = id + ' : ' + $location.path();
+        
         };
         
 		$scope.toggleCollapsibleMenu = function() {
@@ -48,9 +63,8 @@ angular.module('core').controller('HeaderController', ['$scope', 'Authentication
             $scope.search_cnt++;
             //alert(this.content);
             $scope.search_content = this.content;
-            $location.path('/search/' + this.content);
+            $location.path('search/' + this.content);
             /* TODO: do searching with content keyword and redirect to the searching page. */
-            //$location.path('articles/' + response._id);
         };
         
         $scope.isHome = function() {            
